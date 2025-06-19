@@ -12,19 +12,19 @@ logger.setLevel(logging.INFO)
 
 samples = [
     ("CLD_0.5T_Zmumu_ecm240_p_pt", 0.5, "CLD"),
-    ("CLD_1T_Zmumu_ecm240_p_pt", 1.0, "CLD"),
+    ("CLD_1.0T_Zmumu_ecm240_p_pt", 1.0, "CLD"),
     ("CLD_1.25T_Zmumu_ecm240_p_pt", 1.25, "CLD"),
     ("CLD_1.5T_Zmumu_ecm240_p_pt", 1.5, "CLD"),
     ("CLD_1.75T_Zmumu_ecm240_p_pt", 1.75, "CLD"),
-    ("CLD_2T_Zmumu_ecm240_p_pt", 2.0, "CLD"),
+    ("CLD_2.0T_Zmumu_ecm240_p_pt", 2.0, "CLD"),
     ("CLD_2.5T_Zmumu_ecm240_p_pt", 2.5, "CLD"),
-    ("CLD_3T_Zmumu_ecm240_p_pt", 3.0, "CLD"),
+    ("CLD_3.0T_Zmumu_ecm240_p_pt", 3.0, "CLD"),
     ("IDEA_0.5T_Zmumu_ecm240_p_pt", 0.5, "IDEA"),
-    ("IDEA_1T_Zmumu_ecm240_p_pt", 1.0, "IDEA"),
+    ("IDEA_1.0T_Zmumu_ecm240_p_pt", 1.0, "IDEA"),
     ("IDEA_1.5T_Zmumu_ecm240_p_pt", 1.5, "IDEA"),
-    ("IDEA_2T_Zmumu_ecm240_p_pt", 2.0, "IDEA"),
+    ("IDEA_2.0T_Zmumu_ecm240_p_pt", 2.0, "IDEA"),
     ("IDEA_2.5T_Zmumu_ecm240_p_pt", 2.5, "IDEA"),
-    ("IDEA_3T_Zmumu_ecm240_p_pt", 3.0, "IDEA")
+    ("IDEA_3.0T_Zmumu_ecm240_p_pt", 3.0, "IDEA")
 ]
 
 input_dir = "output"
