@@ -1,0 +1,43 @@
+import os
+import logging
+from analysis_qq import analysis  # This assumes your script is named analysis_resolution.py
+
+# Setup logger
+logging.basicConfig(format='%(levelname)s: %(message)s')
+logger = logging.getLogger("batch_runner")
+logger.setLevel(logging.INFO)
+
+# Define your samples
+samples = {
+    "CLD_0.5T_Zuu_ecm91p2": "samples/CLD_0.5T_Zuu_ecm91p2.root",
+    "CLD_1.0T_Zuu_ecm91p2": "samples/CLD_1.0T_Zuu_ecm91p2.root",
+    "CLD_1.5T_Zuu_ecm91p2": "samples/CLD_1.5T_Zuu_ecm91p2.root",
+    "CLD_2.0T_Zuu_ecm91p2": "samples/CLD_2.0T_Zuu_ecm91p2.root",
+    "CLD_2.5T_Zuu_ecm91p2": "samples/CLD_2.5T_Zuu_ecm91p2.root",
+    "CLD_3.0T_Zuu_ecm91p2": "samples/CLD_3.0T_Zuu_ecm91p2.root",
+    "IDEA_0.5T_Zuu_ecm91p2": "samples/IDEA_0.5T_Zuu_ecm91p2.root",
+    "IDEA_1.0T_Zuu_ecm91p2": "samples/IDEA_1.0T_Zuu_ecm91p2.root",
+    "IDEA_1.5T_Zuu_ecm91p2": "samples/IDEA_1.5T_Zuu_ecm91p2.root",
+    "IDEA_2.0T_Zuu_ecm91p2": "samples/IDEA_2.0T_Zuu_ecm91p2.root",
+    "IDEA_2.5T_Zuu_ecm91p2": "samples/IDEA_2.5T_Zuu_ecm91p2.root",
+    "IDEA_3.0T_Zuu_ecm91p2": "samples/IDEA_3.0T_Zuu_ecm91p2.root"
+
+}
+
+# Output folder
+output_dir = "output"
+os.makedirs(output_dir, exist_ok=True)
+
+def main():
+    logger.info("🔁 Starting analysis for all detector configurations...")
+
+    for label, input_path in samples.items():
+        output_file = f"{output_dir}/{label}.root"
+        logger.info(f"🚀 Running analysis on {label}")
+        analysis([input_path], output_file)
+        logger.info(f"✅ Saved to {output_file}")
+
+    logger.info("🎉 All samples processed.")
+
+if __name__ == "__main__":
+    main()
